@@ -14,7 +14,7 @@ Movie App is a Flutter application designed to offer a delightful movie explorat
 
 ## Extra Feature
 
-Feel free to customize and expand upon the core functionalities to create your unique movie app experience!
+*Feel free to customize and expand upon the core functionalities to create your unique movie app experience!*
 
 ## Tech Used
 **Server**: Firebase Auth, Firestore, Cloud Storage, Email Sign In, SQLite, Local Notificaltion
@@ -29,9 +29,9 @@ Feel free to customize and expand upon the core functionalities to create your u
 
 ### Installation
 
-1. Clone this repository: `git clone https://github.com/rsagar024/movie_app.git`
-2. Navigate to the project directory: `cd movie_app`
-3. Install dependencies: `flutter pub get`
+1. **Clone this repository:** `git clone https://github.com/rsagar024/movie_app.git`
+2. **Navigate to the project directory:** `cd movie_app`
+3. **Install dependencies:** `flutter pub get`
 
 ### Running the App
 
