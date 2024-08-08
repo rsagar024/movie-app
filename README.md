@@ -9,8 +9,8 @@ Movie App is a Flutter application designed to offer a delightful movie explorat
 3. Detailed movie information: View a rich overview of each movie, including synopsis, cast, crew, ratings, and more.
 4. Beautiful UI: Enjoy a visually appealing and user-friendly interface.
 5. Additional features (optional):
-	* Mark movies as favorites
-        * Personalized recommendations
+   * Mark movies as favorites
+   * Personalized recommendations
 
 ## Extra Feature
 
