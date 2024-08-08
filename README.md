@@ -1,45 +1,61 @@
-# movie_app: A Flutter App for Exploring Movies
+# Movie App : A Flutter App for Exploring Movies
 
-This repository provides the source code for movie_app, a Flutter application designed to offer a delightful movie exploration experience. Get ready to discover, browse, and learn about movies you'll love!
-Features
+Movie App is a Flutter application designed to offer a delightful movie exploration experience on both Android and iOS!
 
-    Discover new movies: Explore a curated list of popular and trending movies.
-    Search for specific titles: Find the exact movie you're looking for using our robust search functionality.
-    Detailed movie information: View a rich overview of each movie, including synopsis, cast, crew, ratings, and more.
-    Beautiful UI: Enjoy a visually appealing and user-friendly interface. (Consider adding screenshots here!)
-    Additional features (optional):
-        Watch trailers (if supported by API)
-        Mark movies as favorites
-        Personalized recommendations
+## Features
 
-While these are the core functionalities, feel free to customize and expand upon them to create your own unique movie app experience!
-Getting Started
-Prerequisites
+1. Discover new movies: Explore a curated list of popular and trending movies.
+2. Search for specific titles: Find the exact movie you're looking for using our robust search functionality.
+3. Detailed movie information: View a rich overview of each movie, including synopsis, cast, crew, ratings, and more.
+4. Beautiful UI: Enjoy a visually appealing and user-friendly interface.
+5. Additional features (optional):
+	* Mark movies as favorites
+        * Personalized recommendations
 
-    Flutter SDK: Ensure you have the latest Flutter SDK installed following the official guide: [invalid URL removed]
+## Extra Feature
 
-Installation
+Feel free to customize and expand upon the core functionalities to create your unique movie app experience!
 
-    Clone this repository: git clone https://github.com/rsagar024/movie_app.git
-    Navigate to the project directory: cd movie_app
-    Install dependencies: flutter pub get   
+## Tech Used
+**Server**: Firebase Auth, Firestore, Cloud Storage, Email Sign In, SQLite, Local Notificaltion
 
-Running the App
+**Client**: Flutter
 
-    Open a terminal in the project directory.
-    Start the development server: flutter run
+## Getting Started
 
-This will launch the movie_app on your connected device or emulator.
-Contributing
+### Prerequisites
+
+* **Flutter SDK**: Ensure you have the latest Flutter SDK installed following the official guide.
+
+### Installation
+
+1. Clone this repository: `git clone https://github.com/rsagar024/movie_app.git`
+2. Navigate to the project directory: `cd movie_app`
+3. Install dependencies: `flutter pub get`
+
+### Running the App
+
+1. Open a terminal in the project directory.
+2. Start the development server: `flutter run`
+
+This will launch Movie App on your connected device or emulator.
+
+## Contributing
 
 We welcome your contributions! If you have ideas for improvement, bug fixes, or feature enhancements, please feel free to create a pull request.
 
-Here are some guidelines for contributing:
+### Contribution Guidelines
 
-    Fork this repository.
-    Create a new branch for your changes.
-    Implement your modifications and add relevant tests.
-    Ensure your code adheres to the project's style guidelines (if any).
-    Submit a pull request with a clear description of your changes.
+1. Fork this repository.
+2. Create a new branch for your changes.
+3. Implement your modifications and add relevant tests.
+4. Ensure your code adheres to the project's style guidelines (if any).
+5. Submit a pull request with a clear description of your changes.
 
-We appreciate your willingness to contribute to the movie_app project!
+We appreciate your willingness to contribute to the Movie App project!
+
+## feedback
+
+If you have any feedback or suggestions, please reach out to:
+
+ssahu4053@gmail.com
