@@ -1,9 +1,9 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:clickable_list_wheel_view/clickable_list_wheel_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/models/movie_model.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/cast_details.dart';
-import 'package:movie_app/models/movie_model.dart';
 import 'package:movie_app/screens/movie_detail_screen.dart';
 
 class DirectoryPage extends StatefulWidget {

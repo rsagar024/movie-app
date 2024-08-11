@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:movie_app/core/models/movie_model.dart';
+import 'package:movie_app/core/models/notification_model.dart';
+import 'package:movie_app/core/utils/database_methods.dart';
+import 'package:movie_app/core/utils/notification_database_methods.dart';
+import 'package:movie_app/core/utils/notify_service.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/fetch_movie_data_by_id.dart';
-import 'package:movie_app/models/movie_model.dart';
-import 'package:movie_app/models/notification_model.dart';
 import 'package:movie_app/screens/cast_detail_screen.dart';
-import 'package:movie_app/utils/database_methods.dart';
-import 'package:movie_app/utils/notification_database_methods.dart';
-import 'package:movie_app/utils/notify_service.dart';
 import 'package:readmore/readmore.dart';
 import 'package:uuid/uuid.dart';
 

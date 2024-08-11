@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/utils/context_utility.dart';
+import 'package:movie_app/core/utils/notify_service.dart';
+import 'package:movie_app/core/utils/uni_services.dart';
 import 'package:movie_app/screens/mode_screen.dart';
-import 'package:movie_app/utils/context_utility.dart';
-import 'package:movie_app/utils/notify_service.dart';
-import 'package:movie_app/utils/uni_services.dart';
+import 'package:movie_app/view_model/movie_dashboard_view_model.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,14 +18,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: ContextUtility.navigatorKey,
-      title: 'Movie App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => MovieDashboardViewModel(),),
+      ],
+      child: MaterialApp(
+        navigatorKey: ContextUtility.navigatorKey,
+        title: 'Movie App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const ModeScreen(),
       ),
-      debugShowCheckedModeBanner: false,
-      home: const ModeScreen(),
     );
   }
 }

@@ -1,13 +1,13 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:movie_app/core/models/notification_model.dart';
+import 'package:movie_app/core/utils/database_methods.dart';
+import 'package:movie_app/core/utils/notification_database_methods.dart';
+import 'package:movie_app/core/utils/notify_service.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/fetch_home_screen_data.dart';
-import 'package:movie_app/models/notification_model.dart';
 import 'package:movie_app/screens/movie_detail_screen.dart';
-import 'package:movie_app/utils/database_methods.dart';
-import 'package:movie_app/utils/notification_database_methods.dart';
-import 'package:movie_app/utils/notify_service.dart';
 import 'package:uuid/uuid.dart';
 
 class MovieLists extends StatefulWidget {

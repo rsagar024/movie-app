@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:movie_app/api/key.dart';
-import 'package:movie_app/models/cast_info_model.dart';
-import 'package:movie_app/models/movie_model.dart';
+import 'package:movie_app/core/models/cast_info_model.dart';
+import 'package:movie_app/core/models/movie_model.dart';
 
 class FetchCastInfoById {
   Future<List<dynamic>> getCastDetails(String id) async {

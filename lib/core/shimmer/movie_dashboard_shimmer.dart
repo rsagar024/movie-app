@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/shimmer/utils/designs.dart';
+import 'package:movie_app/core/shimmer/utils/designs.dart';
 import 'package:shimmer/shimmer.dart';
 
 class MovieDashboardShimmer extends StatelessWidget {

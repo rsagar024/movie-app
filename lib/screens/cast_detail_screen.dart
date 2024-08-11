@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/utils/global_variable.dart';
 import 'package:movie_app/data/cast_details.dart';
 import 'package:movie_app/data/fetch_cast_details.dart';
-import 'package:movie_app/utils/global_variable.dart';
 
 class CastDetailScreen extends StatefulWidget {
   final String id;

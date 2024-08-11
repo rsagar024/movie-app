@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
-import 'package:movie_app/models/genre_model.dart';
+import 'package:movie_app/core/models/genre_model.dart';
 
 String getDuration(String runtime) {
   List<String> parts = runtime.split(" ");

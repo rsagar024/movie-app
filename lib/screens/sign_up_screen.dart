@@ -16,8 +16,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          // keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
-          // reverse: false,
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
             child: GestureDetector(

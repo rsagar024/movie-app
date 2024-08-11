@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/formatted_month_generator.dart';
+import 'package:movie_app/core/models/formatted_month_generator.dart';
 
 class MovieModel {
   final String title;

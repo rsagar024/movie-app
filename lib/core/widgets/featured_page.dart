@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/models/movie_model.dart';
 import 'package:movie_app/data/cast_details.dart';
-import 'package:movie_app/models/movie_model.dart';
 
 class FeaturedPage extends StatefulWidget {
   const FeaturedPage({Key? key}) : super(key: key);

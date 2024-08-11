@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/utils/global_variable.dart';
-import 'package:movie_app/utils/notification_database_methods.dart';
-import 'package:movie_app/utils/uni_services.dart';
+import 'package:movie_app/core/utils/global_variable.dart';
+import 'package:movie_app/core/utils/notification_database_methods.dart';
+import 'package:movie_app/core/utils/uni_services.dart';
 import 'package:sqflite/sqflite.dart';
 
 class MessagePage extends StatefulWidget {
