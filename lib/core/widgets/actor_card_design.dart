@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/data/call_methods.dart';
-import 'package:movie_app/screens/cast_detail_screen.dart';
+import 'package:movie_app/view/cast_detail_screen.dart';
 import 'package:movie_app/view_model/movie_dashboard_view_model.dart';
 import 'package:provider/provider.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/sign_up_screen.dart';
+import 'package:movie_app/view/onboarding/sign_up_screen.dart';
 
-import 'dashboard.dart';
+import '../dashboard.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);

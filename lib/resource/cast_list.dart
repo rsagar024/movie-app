@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/fetch_movie_data_by_id.dart';
-import 'package:movie_app/screens/cast_detail_screen.dart';
+import 'package:movie_app/view/cast_detail_screen.dart';
 
 class CastLists extends StatefulWidget {
   final String title;

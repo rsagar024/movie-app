@@ -20,7 +20,6 @@ class MovieDashboardViewModel extends ChangeNotifier {
 
   void initDashboard() async {
     isLoading = true;
-    notifyListeners();
     getDatabase();
     getDetails();
   }
@@ -70,11 +69,6 @@ class MovieDashboardViewModel extends ChangeNotifier {
 
       isLoading = false;
       notifyListeners();
-
-      print('Movies : $movie');
-      print('Database Movies : $movieDb');
-      print('Scroll Movies : $scrollMovies');
-      print('Cast : $cast');
     }
   }
 
@@ -122,4 +116,6 @@ class MovieDashboardViewModel extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+
 }

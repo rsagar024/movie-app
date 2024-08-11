@@ -77,21 +77,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ],
                 ),
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: navIcons.length,
-                  itemBuilder: (context, index) => Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width * 0.075,
-                    ),
-                    child: InkWell(
-                      onTap: () => navigationTapped(index),
-                      child: Icon(
-                        navIcons[index],
-                        color: _page == index ? Colors.blue : Colors.grey,
-                      ),
-                    ),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: navIcons
+                      .asMap()
+                      .entries
+                      .map((MapEntry<int, IconData> entry) => GestureDetector(
+                            onTap: () => navigationTapped(entry.key),
+                            child: Icon(
+                              navIcons[entry.key],
+                              color: _page == entry.key
+                                  ? Colors.blue
+                                  : Colors.grey,
+                            ),
+                          ))
+                      .toList(),
                 ),
               ),
             ),

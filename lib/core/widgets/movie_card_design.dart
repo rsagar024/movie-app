@@ -1,6 +1,6 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/movie_detail_screen.dart';
+import 'package:movie_app/view/movie_detail_screen.dart';
 import 'package:movie_app/view_model/movie_dashboard_view_model.dart';
 import 'package:provider/provider.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/core/models/movie_model.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/cast_details.dart';
-import 'package:movie_app/screens/movie_detail_screen.dart';
+import 'package:movie_app/view/movie_detail_screen.dart';
 
 class DirectoryPage extends StatefulWidget {
   const DirectoryPage({Key? key}) : super(key: key);

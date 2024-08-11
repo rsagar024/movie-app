@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/sign_in_screen.dart';
-import 'package:movie_app/screens/sign_up_screen.dart';
+import 'package:movie_app/view/onboarding/sign_in_screen.dart';
+import 'package:movie_app/view/onboarding/sign_up_screen.dart';
 
 class ModeScreen extends StatelessWidget {
   const ModeScreen({Key? key}) : super(key: key);

@@ -7,7 +7,7 @@ import 'package:movie_app/core/utils/notification_database_methods.dart';
 import 'package:movie_app/core/utils/notify_service.dart';
 import 'package:movie_app/data/call_methods.dart';
 import 'package:movie_app/data/fetch_home_screen_data.dart';
-import 'package:movie_app/screens/movie_detail_screen.dart';
+import 'package:movie_app/view/movie_detail_screen.dart';
 import 'package:uuid/uuid.dart';
 
 class MovieLists extends StatefulWidget {
