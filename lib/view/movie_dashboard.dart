@@ -20,6 +20,7 @@ class MovieDashboard extends StatefulWidget {
 class _MovieDashboardState extends State<MovieDashboard> {
   @override
   void initState() {
+    super.initState();
     Provider.of<MovieDashboardViewModel>(context, listen: false)
         .initDashboard();
   }
@@ -193,7 +194,9 @@ class _MovieDashboardState extends State<MovieDashboard> {
                         /// Cast Poster and Details
                         value.isLoading
                             ? const ActorCardShimmer()
-                            : const ActorCardDesign(),
+                            : ActorCardDesign(
+                                casts: value.cast,
+                              ),
                         const Padding(
                           padding: EdgeInsets.only(
                             top: 5,

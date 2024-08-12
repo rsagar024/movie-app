@@ -74,7 +74,7 @@ class NetworkServiceImpl extends INetworkService {
   @override
   Future<dynamic> getPersons(String query, int page) async {
     final response = await http.get(
-      Uri.parse('$BASE_URL/search/tv?text=$query&page=${page.toString()}'),
+      Uri.parse('$BASE_URL/search/person?text=$query&page=${page.toString()}'),
     );
     if (response.statusCode == 200) {
       return jsonDecode(response.body);

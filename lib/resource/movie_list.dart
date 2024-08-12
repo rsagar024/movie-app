@@ -147,15 +147,6 @@ class _MovieListsState extends State<MovieLists> {
                             widget.isFavorite
                                 ? Container()
                                 : IconButton(
-                                    // onPressed: () {
-                                    //   Navigator.pushAndRemoveUntil(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             const DashboardScreen()),
-                                    //     (Route<dynamic> route) => false,
-                                    //   );
-                                    // },
                                     onPressed: () => Navigator.pop(context),
                                     icon: const Icon(
                                       Icons.arrow_back,
@@ -333,7 +324,8 @@ class _MovieListsState extends State<MovieLists> {
                             itemCount: _movie.length,
                             itemBuilder: (context, index) {
                               return Container(
-                                // margin: const EdgeInsets.only(bottom: 10),
+                                height: 180,
+                                width: MediaQuery.of(context).size.width,
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 25,
                                   vertical: 10,
@@ -347,9 +339,6 @@ class _MovieListsState extends State<MovieLists> {
                                     ),
                                   ),
                                 ),
-                                // color: Colors.yellow,
-                                height: 180,
-                                width: MediaQuery.of(context).size.width,
                                 child: Row(
                                   children: [
                                     ///Scrolling Movie Posters
@@ -387,35 +376,6 @@ class _MovieListsState extends State<MovieLists> {
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
-                                            /*child: Stack(
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.only(
-                                                    top: 10,
-                                                    right: 10,
-                                                  ),
-                                                  child: Align(
-                                                    alignment: Alignment.topRight,
-                                                    child: BlurryContainer(
-                                                      blur: 1,
-                                                      color: Colors.white54,
-                                                      padding:
-                                                          const EdgeInsets.symmetric(
-                                                        vertical: 4,
-                                                        horizontal: 8,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(20),
-                                                      child: const Icon(
-                                                        Icons.favorite,
-                                                        color: Colors.red,
-                                                        size: 17,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),*/
                                           ),
                                         ),
                                         Container(
@@ -436,11 +396,6 @@ class _MovieListsState extends State<MovieLists> {
                                               ),
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              /*child: const Icon(
-                                                Icons.favorite,
-                                                color: Colors.red,
-                                                size: 17,
-                                              ),*/
                                               child: GestureDetector(
                                                 onTap: () async {
                                                   if (_movie[index].favorite ==

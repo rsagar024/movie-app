@@ -40,11 +40,9 @@ class MovieCardDesign extends StatelessWidget {
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                      // image: AssetImage(
-                      //   'assets/images/person.webp',
-                      // ),
-                      image:
-                          NetworkImage(value.movie[movieIndex][index].poster),
+                      image: NetworkImage(
+                        value.movie[movieIndex][index].poster,
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -103,7 +101,8 @@ class MovieCardDesign extends StatelessWidget {
                                 ),
                                 borderRadius: BorderRadius.circular(20),
                                 child: GestureDetector(
-                                  onTap: () => value.updateFavorite(index, movieIndex),
+                                  onTap: () =>
+                                      value.updateFavorite(index, movieIndex),
                                   child:
                                       value.movie[movieIndex][index].favorite ==
                                               1

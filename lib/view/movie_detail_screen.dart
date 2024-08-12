@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/core/models/movie_model.dart';
+import 'package:movie_app/core/widgets/actor_card_design.dart';
+import 'package:movie_app/core/widgets/error_screen.dart';
 import 'package:movie_app/data/call_methods.dart';
-import 'package:movie_app/view/cast_detail_screen.dart';
 import 'package:movie_app/view_model/movie_details_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
 
 class MovieDetailScreen extends StatefulWidget {
-  // final String id;
   final MovieModel movieModel;
   const MovieDetailScreen({
     Key? key,
-    // required this.id,
     required this.movieModel,
   }) : super(key: key);
 
@@ -22,6 +21,7 @@ class MovieDetailScreen extends StatefulWidget {
 class _MovieDetailScreenState extends State<MovieDetailScreen> {
   @override
   void initState() {
+    super.initState();
     Provider.of<MovieDetailsViewModel>(context, listen: false)
         .initDetails(widget.movieModel);
   }
@@ -184,7 +184,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          vertical: 10,),
+                                        vertical: 10,
+                                      ),
                                       child: SizedBox(
                                         height: 35,
                                         width:
@@ -292,79 +293,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(top: 15),
-                                      child: SizedBox(
-                                        height: 160,
-                                        child: ListView.builder(
-                                          scrollDirection: Axis.horizontal,
-                                          itemCount: value.details[2].length,
-                                          itemBuilder: (context, index) {
-                                            return GestureDetector(
-                                              onTap: () {
-                                                Navigator.pushAndRemoveUntil(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        CastDetailScreen(
-                                                      id: value
-                                                          .details[2][index].id,
-                                                      isHome: true,
-                                                    ),
-                                                  ),
-                                                  (Route<dynamic> route) =>
-                                                      true,
-                                                );
-                                              },
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Container(
-                                                    height: 100,
-                                                    width: 80,
-                                                    margin:
-                                                        const EdgeInsets.only(
-                                                      right: 20,
-                                                    ),
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10),
-                                                      image: DecorationImage(
-                                                        image: NetworkImage(
-                                                          value
-                                                              .details[2][index]
-                                                              .image,
-                                                        ),
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 80,
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                          .symmetric(
-                                                        vertical: 10,
-                                                      ),
-                                                      child: Text(
-                                                        '${value.details[2][index].name}',
-                                                        maxLines: 2,
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: const TextStyle(
-                                                          fontSize: 13,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          fontFamily: 'SF_Pro',
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            );
-                                          },
-                                        ),
+                                      child: ActorCardDesign(
+                                        casts: value.details[2],
                                       ),
                                     ),
                                   ],
@@ -380,56 +310,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         ),
       );
     } catch (e) {
-      return SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            foregroundColor: Colors.black,
-          ),
-          body: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-            ),
-            alignment: Alignment.center,
-            child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage(
-                    'assets/images/exclamation.png',
-                  ),
-                  backgroundColor: Colors.white,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 7,
-                  ),
-                  child: Text(
-                    'Something went wrong!',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'SF_Pro',
-                    ),
-                  ),
-                ),
-                Text(
-                  'We so sorry about the error. Please try again later.',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: 'SF_Pro',
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
+      return const ErrorScreen();
     }
   }
 }

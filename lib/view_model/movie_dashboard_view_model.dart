@@ -27,13 +27,11 @@ class MovieDashboardViewModel extends ChangeNotifier {
   void getDatabase() async {
     _databaseMethods = DatabaseMethods();
     _notificationDatabaseMethods = NotificationDatabaseMethods();
-    Database database = await _databaseMethods.database;
-    Database notifyDatabase = await _notificationDatabaseMethods.notifyDatabase;
-    if (database != null && notifyDatabase != null) {
-      movieDb = await _databaseMethods.getMovieList();
-      await _notificationDatabaseMethods.getNotifyCount();
+    await _databaseMethods.database;
+    await _notificationDatabaseMethods.notifyDatabase;
+    movieDb = await _databaseMethods.getMovieList();
+    await _notificationDatabaseMethods.getNotifyCount();
     }
-  }
 
   void getDetails() async {
     movie = await MovieRepository().getHomePageMovies();
