@@ -7,6 +7,7 @@ import 'package:movie_app/core/widgets/movie_card_design.dart';
 import 'package:movie_app/core/widgets/slider_design.dart';
 import 'package:movie_app/resource/cast_list.dart';
 import 'package:movie_app/resource/movie_list.dart';
+import 'package:movie_app/view/movie_detail_screen.dart';
 import 'package:movie_app/view_model/movie_dashboard_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -146,8 +147,34 @@ class _MovieDashboardState extends State<MovieDashboard> {
                         /// Popular Movies Poster and Details
                         value.isLoading
                             ? const MovieCardShimmer()
-                            : const MovieCardDesign(
-                                movieIndex: 0,
+                            : SizedBox(
+                                height: 220,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: value.movie[0].length,
+                                  itemBuilder: (context, index) {
+                                    return GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                MovieDetailScreen(
+                                              movieModel: value.movie[0][index],
+                                            ),
+                                          ),
+                                          (Route<dynamic> route) => true,
+                                        );
+                                      },
+                                      child: MovieCardDesign(
+                                        movie: value.movie[0][index],
+                                        movieIndex: 0,
+                                        index: index,
+                                        width: 165,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
                         const SizedBox(
                           height: 20,
@@ -215,8 +242,34 @@ class _MovieDashboardState extends State<MovieDashboard> {
                         ),
                         value.isLoading
                             ? const MovieCardShimmer()
-                            : const MovieCardDesign(
-                                movieIndex: 3,
+                            : SizedBox(
+                                height: 220,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: value.movie[3].length,
+                                  itemBuilder: (context, index) {
+                                    return GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                MovieDetailScreen(
+                                              movieModel: value.movie[3][index],
+                                            ),
+                                          ),
+                                          (Route<dynamic> route) => true,
+                                        );
+                                      },
+                                      child: MovieCardDesign(
+                                        movie: value.movie[3][index],
+                                        movieIndex: 3,
+                                        index: index,
+                                        width: 165,
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
                         const SizedBox(
                           height: 63,
